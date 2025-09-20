@@ -1,0 +1,27 @@
+#  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+#             status TEXT CHECK(status IN ('pending', 'done')) DEFAULT 'pending',
+#             FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+
+
+
+# nsert_table(callback.from_user.id,description, day,time)
+#         await callback.message.answer("✅ Vazifa qo'shildi")
+#     elif callback.data == "no":
+#         await callback.message.answer("❌ Amalyot bekor qilindi")
+
+#     await callback.answer()
+#     # await state.clear()
+
+
+# user_id = message.from_user.id
+#     tasks = select_task(user_id)
+#     if tasks:
+#         for task in tasks:
+#             text = f"""
+#             {i18n('description_text')}: {task[2]}
+#             {i18n('deadline_text')}: {task[3]}
+#             {i18n('notification_text')}: {task[4]}
+#             """
+#             await message.answer(text)
+#     else:
+#         await message.answer(i18n("no_tasks"))
